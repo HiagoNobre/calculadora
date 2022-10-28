@@ -123,54 +123,19 @@ botaoLimpar.onclick = () => {
     limpar();
     funcaoZerar();
 }
-botaoApagar.onclick = () => {
-    funcaoBotaoApagar();
-}
-
-botaoIgual.onclick = () => {
-    funcaoBotaoIgual();
-}
-
-botaoDivisao.onclick = () => {
-    botoesOperacoes("/");
-}
-botaoMultiplicacao.onclick = () => {
-    botoesOperacoes("x");
-}
-botaoSubtracao.onclick = () => {
-    botoesOperacoes("-");
-}
-botaoAdicao.onclick = () => {
-    botoesOperacoes("+");
-}
-
-botaoNumeros[0].onclick = () => {
-    funcaoBotoesNumeros("9");
-}
-botaoNumeros[3].onclick = () => {
-    funcaoBotoesNumeros("8");
-}
-botaoNumeros[2].onclick = () => {
-    funcaoBotoesNumeros("7");
-}
-botaoNumeros[5].onclick = () => {
-    funcaoBotoesNumeros("6");
-}
-botaoNumeros[4].onclick = () => {
-    funcaoBotoesNumeros("5");
-}
-botaoNumeros[7].onclick = () => {
-    funcaoBotoesNumeros("4");
-}
-botaoNumeros[6].onclick = () => {
-    funcaoBotoesNumeros("3");
-}
-botaoNumeros[9].onclick = () => {
-    funcaoBotoesNumeros("2");
-}
-botaoNumeros[8].onclick = () => {
-    funcaoBotoesNumeros("1");
-}
-botaoNumeros[1].onclick = () => {
-    funcaoBotoesNumeros("0");
-}
+botaoApagar.onclick = () => { funcaoBotaoApagar(); }
+botaoIgual.onclick = () => { funcaoBotaoIgual(); }
+botaoDivisao.onclick = () => { botoesOperacoes("/"); }
+botaoMultiplicacao.onclick = () => { botoesOperacoes("x"); }
+botaoSubtracao.onclick = () => { botoesOperacoes("-"); }
+botaoAdicao.onclick = () => { botoesOperacoes("+"); }
+botaoNumeros[0].onclick = () => { funcaoBotoesNumeros("9"); }
+botaoNumeros[3].onclick = () => { funcaoBotoesNumeros("8"); }
+botaoNumeros[2].onclick = () => { funcaoBotoesNumeros("7"); }
+botaoNumeros[5].onclick = () => { funcaoBotoesNumeros("6"); }
+botaoNumeros[4].onclick = () => { funcaoBotoesNumeros("5"); }
+botaoNumeros[7].onclick = () => { funcaoBotoesNumeros("4"); }
+botaoNumeros[6].onclick = () => { funcaoBotoesNumeros("3"); }
+botaoNumeros[9].onclick = () => { funcaoBotoesNumeros("2"); }
+botaoNumeros[8].onclick = () => { funcaoBotoesNumeros("1"); }
+botaoNumeros[1].onclick = () => { funcaoBotoesNumeros("0"); }
