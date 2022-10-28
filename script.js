@@ -72,7 +72,6 @@ const funcaoBotaoApagar = () => {
         segundoValor = resultado.textContent;
     }
 }
-
 const funcaoBotaoIgual = () => {
     if (primeiroValor !== "" && segundoValor !== "") {
         valor1 = parseInt(primeiroValor.trim(), 10);
