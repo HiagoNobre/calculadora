@@ -58,26 +58,7 @@ const botoesOperacoes = (operador) => {
         resultado.textContent = "valor?";
     }
 }
-const funcaoBotoesNumeros = (numero) => {
-    if (primeiroValor === "" && resultado.textContent !== "") {
-        resultado.textContent = "";
-    }
-    if (resultado.textContent.length >= 14) {
-        funcaoApagar();
-        funcaoInserirEGuardar(numero);
-    } else if (resultado.textContent === "valor?" || resultado.textContent !== "" && primeiroValor === "") {
-        limpar();
-        funcaoInserirEGuardar(numero);
-    } else {
-        funcaoInserirEGuardar(numero);
-    }
-}
-
-botaoLimpar.onclick = () => {
-    limpar();
-    funcaoZerar();
-}
-botaoApagar.onclick = () => {
+const funcaoBotaoApagar = () => {
     if (primeiroValor === "" && resultado.textContent !== "") {
         funcaoZerar();
     }
@@ -92,7 +73,7 @@ botaoApagar.onclick = () => {
     }
 }
 
-botaoIgual.onclick = () => {
+const funcaoBotaoIgual = () => {
     if (primeiroValor !== "" && segundoValor !== "") {
         valor1 = parseInt(primeiroValor.trim(), 10);
         valor2 = parseInt(segundoValor.trim(), 10);
@@ -122,6 +103,32 @@ botaoIgual.onclick = () => {
     } else {
         limpar();
     }
+}
+const funcaoBotoesNumeros = (numero) => {
+    if (primeiroValor === "" && resultado.textContent !== "") {
+        resultado.textContent = "";
+    }
+    if (resultado.textContent.length >= 14) {
+        funcaoApagar();
+        funcaoInserirEGuardar(numero);
+    } else if (resultado.textContent === "valor?" || resultado.textContent !== "" && primeiroValor === "") {
+        limpar();
+        funcaoInserirEGuardar(numero);
+    } else {
+        funcaoInserirEGuardar(numero);
+    }
+}
+
+botaoLimpar.onclick = () => {
+    limpar();
+    funcaoZerar();
+}
+botaoApagar.onclick = () => {
+    funcaoBotaoApagar();
+}
+
+botaoIgual.onclick = () => {
+    funcaoBotaoIgual();
 }
 
 botaoDivisao.onclick = () => {
