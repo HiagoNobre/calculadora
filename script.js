@@ -6,16 +6,7 @@ const botaoDivisao = document.querySelector('.divisao');
 const botaoMultiplicacao = document.querySelector('.multiplicacao');
 const botaoSubtracao = document.querySelector('.subtracao');
 const botaoAdicao = document.querySelector('.adicao');
-const botaoNove = document.querySelector('.nove');
-const botaoOito = document.querySelector('.oito');
-const botaoSete = document.querySelector('.sete');
-const botaoSeis = document.querySelector('.seis');
-const botaoCinco = document.querySelector('.cinco');
-const botaoQuatro = document.querySelector('.quatro');
-const botaoTres = document.querySelector('.tres');
-const botaoDois = document.querySelector('.dois');
-const botaoUm = document.querySelector('.um');
-const botaoZero = document.querySelector('.zero');
+const botaoNumeros = document.querySelectorAll('.numero');
 let primeiroValor = "";
 let segundoValor = "";
 let operacao = "nenhumaOperacaoSelecionada";
@@ -146,33 +137,33 @@ botaoAdicao.onclick = () => {
     botoesOperacoes("+");
 }
 
-botaoNove.onclick = () => {
+botaoNumeros[0].onclick = () => {
     funcaoBotoesNumeros("9");
 }
-botaoOito.onclick = () => {
+botaoNumeros[3].onclick = () => {
     funcaoBotoesNumeros("8");
 }
-botaoSete.onclick = () => {
+botaoNumeros[2].onclick = () => {
     funcaoBotoesNumeros("7");
 }
-botaoSeis.onclick = () => {
+botaoNumeros[5].onclick = () => {
     funcaoBotoesNumeros("6");
 }
-botaoCinco.onclick = () => {
+botaoNumeros[4].onclick = () => {
     funcaoBotoesNumeros("5");
 }
-botaoQuatro.onclick = () => {
+botaoNumeros[7].onclick = () => {
     funcaoBotoesNumeros("4");
 }
-botaoTres.onclick = () => {
+botaoNumeros[6].onclick = () => {
     funcaoBotoesNumeros("3");
 }
-botaoDois.onclick = () => {
+botaoNumeros[9].onclick = () => {
     funcaoBotoesNumeros("2");
 }
-botaoUm.onclick = () => {
+botaoNumeros[8].onclick = () => {
     funcaoBotoesNumeros("1");
 }
-botaoZero.onclick = () => {
+botaoNumeros[1].onclick = () => {
     funcaoBotoesNumeros("0");
 }
