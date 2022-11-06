@@ -6,16 +6,7 @@ const botaoDivisao = document.querySelector('.divisao');
 const botaoMultiplicacao = document.querySelector('.multiplicacao');
 const botaoSubtracao = document.querySelector('.subtracao');
 const botaoAdicao = document.querySelector('.adicao');
-const botaoNove = document.querySelector('.nove');
-const botaoOito = document.querySelector('.oito');
-const botaoSete = document.querySelector('.sete');
-const botaoSeis = document.querySelector('.seis');
-const botaoCinco = document.querySelector('.cinco');
-const botaoQuatro = document.querySelector('.quatro');
-const botaoTres = document.querySelector('.tres');
-const botaoDois = document.querySelector('.dois');
-const botaoUm = document.querySelector('.um');
-const botaoZero = document.querySelector('.zero');
+const botaoNumeros = document.querySelectorAll('.numero');
 let primeiroValor = "";
 let segundoValor = "";
 let operacao = "nenhumaOperacaoSelecionada";
@@ -67,26 +58,7 @@ const botoesOperacoes = (operador) => {
         resultado.textContent = "valor?";
     }
 }
-const funcaoBotoesNumeros = (numero) => {
-    if (primeiroValor === "" && resultado.textContent !== "") {
-        resultado.textContent = "";
-    }
-    if (resultado.textContent.length >= 14) {
-        funcaoApagar();
-        funcaoInserirEGuardar(numero);
-    } else if (resultado.textContent === "valor?" || resultado.textContent !== "" && primeiroValor === "") {
-        limpar();
-        funcaoInserirEGuardar(numero);
-    } else {
-        funcaoInserirEGuardar(numero);
-    }
-}
-
-botaoLimpar.onclick = () => {
-    limpar();
-    funcaoZerar();
-}
-botaoApagar.onclick = () => {
+const funcaoBotaoApagar = () => {
     if (primeiroValor === "" && resultado.textContent !== "") {
         funcaoZerar();
     }
@@ -100,8 +72,7 @@ botaoApagar.onclick = () => {
         segundoValor = resultado.textContent;
     }
 }
-
-botaoIgual.onclick = () => {
+const funcaoBotaoIgual = () => {
     if (primeiroValor !== "" && segundoValor !== "") {
         valor1 = parseInt(primeiroValor.trim(), 10);
         valor2 = parseInt(segundoValor.trim(), 10);
@@ -132,47 +103,38 @@ botaoIgual.onclick = () => {
         limpar();
     }
 }
+const funcaoBotoesNumeros = (numero) => {
+    if (primeiroValor === "" && resultado.textContent !== "") {
+        resultado.textContent = "";
+    }
+    if (resultado.textContent.length >= 14) {
+        funcaoApagar();
+        funcaoInserirEGuardar(numero);
+    } else if (resultado.textContent === "valor?" || resultado.textContent !== "" && primeiroValor === "") {
+        limpar();
+        funcaoInserirEGuardar(numero);
+    } else {
+        funcaoInserirEGuardar(numero);
+    }
+}
 
-botaoDivisao.onclick = () => {
-    botoesOperacoes("/");
+botaoLimpar.onclick = () => {
+    limpar();
+    funcaoZerar();
 }
-botaoMultiplicacao.onclick = () => {
-    botoesOperacoes("x");
-}
-botaoSubtracao.onclick = () => {
-    botoesOperacoes("-");
-}
-botaoAdicao.onclick = () => {
-    botoesOperacoes("+");
-}
-
-botaoNove.onclick = () => {
-    funcaoBotoesNumeros("9");
-}
-botaoOito.onclick = () => {
-    funcaoBotoesNumeros("8");
-}
-botaoSete.onclick = () => {
-    funcaoBotoesNumeros("7");
-}
-botaoSeis.onclick = () => {
-    funcaoBotoesNumeros("6");
-}
-botaoCinco.onclick = () => {
-    funcaoBotoesNumeros("5");
-}
-botaoQuatro.onclick = () => {
-    funcaoBotoesNumeros("4");
-}
-botaoTres.onclick = () => {
-    funcaoBotoesNumeros("3");
-}
-botaoDois.onclick = () => {
-    funcaoBotoesNumeros("2");
-}
-botaoUm.onclick = () => {
-    funcaoBotoesNumeros("1");
-}
-botaoZero.onclick = () => {
-    funcaoBotoesNumeros("0");
-}
+botaoApagar.onclick = () => { funcaoBotaoApagar(); }
+botaoIgual.onclick = () => { funcaoBotaoIgual(); }
+botaoDivisao.onclick = () => { botoesOperacoes("/"); }
+botaoMultiplicacao.onclick = () => { botoesOperacoes("x"); }
+botaoSubtracao.onclick = () => { botoesOperacoes("-"); }
+botaoAdicao.onclick = () => { botoesOperacoes("+"); }
+botaoNumeros[0].onclick = () => { funcaoBotoesNumeros("9"); }
+botaoNumeros[3].onclick = () => { funcaoBotoesNumeros("8"); }
+botaoNumeros[2].onclick = () => { funcaoBotoesNumeros("7"); }
+botaoNumeros[5].onclick = () => { funcaoBotoesNumeros("6"); }
+botaoNumeros[4].onclick = () => { funcaoBotoesNumeros("5"); }
+botaoNumeros[7].onclick = () => { funcaoBotoesNumeros("4"); }
+botaoNumeros[6].onclick = () => { funcaoBotoesNumeros("3"); }
+botaoNumeros[9].onclick = () => { funcaoBotoesNumeros("2"); }
+botaoNumeros[8].onclick = () => { funcaoBotoesNumeros("1"); }
+botaoNumeros[1].onclick = () => { funcaoBotoesNumeros("0"); }
